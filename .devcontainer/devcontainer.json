@@ -1,0 +1,17 @@
+{
+  "name": "OpenPCDet Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--gpus", "all"
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "postCreateCommand": "conda init bash"
+}
